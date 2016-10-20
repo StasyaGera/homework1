@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="numeric_buttons">
+        <item name="d0" type="id"/>
+        <item name="d1" type="id"/>
+        <item name="d2" type="id"/>
+        <item name="d3" type="id"/>
+        <item name="d4" type="id"/>
+        <item name="d5" type="id"/>
+        <item name="d6" type="id"/>
+        <item name="d7" type="id"/>
+        <item name="d8" type="id"/>
+        <item name="d9" type="id"/>
+    </array>
+</resources>

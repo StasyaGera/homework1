@@ -1,7 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
 
-</LinearLayout>
+    android:orientation="vertical" >
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+
+        android:scrollbars="none"
+        android:id="@+id/inputScroll" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+
+            android:scrollHorizontally="true"
+            android:textSize="60sp"
+            android:textColor="@color/textColor"
+            android:maxLines="1"
+            android:id="@+id/result" />
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_below="@id/inputScroll"
+
+        android:scrollbars="none"
+        android:id="@+id/resultScroll" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_gravity="end"
+
+            android:scrollHorizontally="true"
+            android:textSize="40sp"
+            android:gravity="bottom"
+            android:textColor="@color/textColor"
+            android:maxLines="1"
+
+            android:id="@+id/temporary" />
+    </HorizontalScrollView>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/resultScroll"
+
+        android:weightSum="4" >
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+
+            android:weightSum="4"
+            android:id="@+id/numeric" />
+
+        <TableLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            android:orientation="vertical"
+            android:weightSum="6"
+            android:id="@+id/operations" >
+
+            <Button
+                android:id="@+id/clear"
+                android:text="@string/clr"
+                style="@style/OperationButtonStyle" />
+            <Button
+                android:id="@+id/add"
+                android:text="@string/add"
+                style="@style/OperationButtonStyle"/>
+            <Button
+                android:id="@+id/sub"
+                android:text="@string/sub"
+                style="@style/OperationButtonStyle" />
+            <Button
+                android:id="@+id/mul"
+                android:text="@string/mul"
+                style="@style/OperationButtonStyle" />
+            <Button
+                android:id="@+id/div"
+                android:text="@string/div"
+                style="@style/OperationButtonStyle" />
+            <Button
+                android:id="@+id/eqv"
+                android:text="@string/eqv"
+                style="@style/OperationButtonStyle" />
+        </TableLayout>
+    </TableRow>
+</RelativeLayout>
